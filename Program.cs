@@ -23,6 +23,8 @@ namespace Cordinates
             {
                 DrawGame(playerX, playerY, enemyX, enemyY, itemX, itemY);
 
+                CheckPosition(playerX, playerY, enemyX, enemyY, itemX, itemY);
+
                 bool quit = MovePlayer(ref playerX, ref playerY);
 
                 if (quit)
@@ -72,5 +74,21 @@ namespace Cordinates
 
             return false;
         }
+
+        static void CheckPosition(int playerX, int playerY, int enemyX, int enemyY, int itemX, int itemY)
+        {
+            if (playerX == enemyX && playerY == enemyY)
+            {
+                Console.WriteLine();
+                Console.WriteLine("The player is on the enemy!");
+            }
+
+            if (playerX == itemX && playerY == itemY)
+            {
+                Console.WriteLine();
+                Console.WriteLine("The player is on the item!");
+            }
+        }
+
     }
 }
