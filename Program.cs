@@ -45,6 +45,13 @@ namespace Cordinates
             Console.WriteLine();
             Console.WriteLine("Use WASD to move");
             Console.WriteLine("Q to quit");
+
+            Console.SetCursorPosition(playerX, playerY);
+            Console.Write("P");
+            Console.SetCursorPosition(enemyX, enemyY);
+            Console.Write("E");
+            Console.SetCursorPosition(itemX, itemY);
+            Console.Write("I");
         }
 
         static bool MovePlayer(ref int playerX, ref int playerY)
